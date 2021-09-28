@@ -8,6 +8,26 @@
 </head>
 <link rel="stylesheet" type="text/css" href="stylemedal.css">
 <link rel="stylesheet" type="text/css" href="Boostrap/bootstrap.css">
+<style>
+    a, button,input[type=submit],input[type=reset] {
+        font-family: sans-serif;
+        font-size: 15px;
+        background: #22a4cf;
+        color: white;
+        border: white 3px solid;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-top: 10px;
+        float: right;
+        margin-right: 50px;
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover{
+        opacity:0.9;
+    }
+    </style>
 <script type="text/javascript">
     window.onload = function() { jam(); }
    
@@ -35,7 +55,7 @@
    </script>
 <body>
         <div class="wrapper">
-            <center><marquee><p><b>Juma't, 24 Sept 2021 : Kunjungan Putri Indonesia, Pukul 09.00 WIT Bertempat Di Ruang Rapat SEKRETARIAT SUB PB PON KOTA JAYAPURA | KEDATANGAN KONTINGAN : Cabor Tenis - NTB; Cabor Dayung Canoe - KALTENG, KALSEL, RIAU, SUMSEL, SUMUT, JATENG; Cabor Sepatu Roda - DI YOGYAKARTA, ACEH, RIAU, SUMSEL, SUMUT, SULTENG, JATENG; Cabor Sepak Takraw - BABEL, KALSEL, SULSEL, SULTENG, RIAU, SUMSEL, SUMUT, SULTENG, JATENG, KEP.RIAU, BALI; Cabor Sepak Bola - SULUT, SULSEL, ACEH, SUMUT, JATENG; Cabor Layar - JATIM; Cabor Voli Indoor - JABAR; Cabor Dayung Rowing - JAMBI.</b></p></marquee></center>
+            <center><marquee><p><b><img src="img/logkota.png"> Persiapan Welcome Party <img src="img/logkota.png">  </b></p></marquee></center>
         </div>
         <div class="navbar">
             <div class="logo"><img src="img/logopon.png">
@@ -53,6 +73,7 @@
         <center>
             <h1 style="font-size: 30px; font-family: verdana; color: #fff; float: right; margin-right: 140px;" id="jam"></h1>
             </center>
+            
             <script type='text/javascript'>
                 window.setTimeout("hari()",0)
                 function hari(){
@@ -63,7 +84,9 @@
                  document.getElementById("dino").innerHTML =namah[tanggal.getDay()]+", "+tanggal.getDate()+" "+namab[tanggal.getMonth()]+" "+tanggal.getFullYear();
                 }
                 </script>
+                
                 <div style="color : #fff;font-size: 30px; margin-left:120px" id='dino'></div>
+                <a href="index.html">BACK</a>
         <section>
             <table cellspacing='0'class="table table-hover table-responsive">
                 <thead>
@@ -83,34 +106,26 @@
                     <tr>
                         <td><center>1</center></td>
                         <td class="sb"><img src="img/papua.png">Papua</td>
-                        <td>10</td>
-                        <td>1</td>
+                        <td>9</td>
                         <td>2</td>
-                        <td>13</td>
+                        <td>3</td>
+                        <td>14</td>
                     </tr>
                     <tr>
                         <td><center>2</center></td>
                         <td class="sb"><img src="img/dki.png">DKI Jakarta</td>
+                        <td>4</td>
                         <td>3</td>
-                        <td>2</td>
                         <td>5</td>
-                        <td>10</td>
+                        <td>12</td>
                     </tr>
                     <tr>
                         <td><center>3</center></td>
                         <td class="sb"><img src="img/jabar.png">Jawa Barat</td>
                         <td>2</td>
                         <td>3</td>
-                        <td>3</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td><center>4</center></td>
-                        <td class="sb"><img src="img/bali.png">Bali</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>2</td>
+                        <td>4</td>
+                        <td>9</td>
                     </tr>
                     <tr>
                         <td><center>4</center></td>
@@ -122,14 +137,39 @@
                     </tr>
                     <tr>
                         <td><center>4</center></td>
-                        <td class="sb"><img src="img/riau.png">Riau</td>
+                        <td class="sb"><img src="img/kaltim.png">Kalimantan Timur</td>
                         <td>1</td>
                         <td>1</td>
                         <td>0</td>
                         <td>2</td>
                     </tr>
                     <tr>
+                        <td><center>4</center></td>
+                        <td class="sb"><img src="img/bali.png">Bali</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>2</td>
+                    </tr>
+                    
+                    <tr>
                         <td><center>7</center></td>
+                        <td class="sb"><img src="img/riau.png">Riau</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td><center>8</center></td>
+                        <td class="sb"><img src="img/jatim.png">Jawa Timur</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td><center>9</center></td>
                         <td class="sb"><img src="img/sumatrautara.png">Sumatra Utara</td>
                         <td>0</td>
                         <td>2</td>
@@ -137,7 +177,7 @@
                         <td>2</td>
                     </tr>
                     <tr>
-                        <td><center>8</center></td>
+                        <td><center>10</center></td>
                         <td class="sb"><img src="img/jambi.jpg">Jambi</td>
                         <td>0</td>
                         <td>1</td>
@@ -145,7 +185,7 @@
                         <td>3</td>
                     </tr>
                     <tr>
-                        <td><center>9</center></td>
+                        <td><center>11</center></td>
                         <td class="sb"><img src="img/diy.png">Daerah Istimewa Yogyakarta</td>
                         <td>0</td>
                         <td>1</td>
@@ -153,31 +193,17 @@
                         <td>2</td>
                     </tr>
                     <tr>
-                        <td><center>9</center></td>
+                        <td><center>11</center></td>
                         <td class="sb"><img src="img/papuabarat.png">Papua Barat</td>
                         <td>0</td>
                         <td>1</td>
                         <td>1</td>
                         <td>2</td>
                     </tr>
+                    
+                    
                     <tr>
-                        <td><center>9</center></td>
-                        <td class="sb"><img src="img/jatim.png">Jawa Timur</td>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td><center>12</center></td>
-                        <td class="sb"><img src="img/kaltim.png">Kalimantan Timur</td>
-                        <td>0</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td><center>12</center></td>
+                        <td><center>13</center></td>
                         <td class="sb"><img src="img/kalteng.png">Kalimantan Tengah</td>
                         <td>0</td>
                         <td>1</td>
@@ -210,7 +236,7 @@
                     </tr>
                      
                     <tr>
-                        <td><center>14</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/kalbar.png">Kalimantan Barat </td>
                         <td>0</td>
                         <td>0</td>
@@ -218,7 +244,7 @@
                         <td>1</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/bengkulu.png">Bengkulu</td>
                         <td>0</td>
                         <td>0</td>
@@ -227,7 +253,7 @@
                     </tr>
                 
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/gorontalo.jpg">Gorontalo</td>
                         <td>0</td>
                         <td>0</td>
@@ -236,24 +262,24 @@
                     </tr>
                    
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/bangkabelitung.png">Bangka Belitung</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/jateng.png">Jawa Tengah</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
                     </tr>
                    
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/kalsel.gif">Kalimantan Selatan</td>
                         <td>0</td>
                         <td>0</td>
@@ -262,7 +288,7 @@
                     </tr>
                   
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/kalutara.png">Kalimantan Utara</td>
                         <td>0</td>
                         <td>0</td>
@@ -271,7 +297,7 @@
                     </tr>
                     
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/lampung.png">Lampung</td>
                         <td>0</td>
                         <td>0</td>
@@ -279,7 +305,7 @@
                         <td>0</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/maluku.png">Maluku</td>
                         <td>0</td>
                         <td>0</td>
@@ -288,7 +314,7 @@
                     </tr>
                    
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/ntb.png">Nusa Tenggara Barat</td>
                         <td>0</td>
                         <td>0</td>
@@ -296,7 +322,7 @@
                         <td>0</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/ntt.png">Nusa Tenggara Timur</td>
                         <td>0</td>
                         <td>0</td>
@@ -304,7 +330,7 @@
                         <td>0</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/aceh.png">Aceh</td> 
                         <td>0</td>
                         <td>0</td>
@@ -314,7 +340,7 @@
                     
                   
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/sulawesibarat.png">Sulawesi Barat</td>
                         <td>0</td>
                         <td>0</td>
@@ -322,7 +348,7 @@
                         <td>0</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/sulawesiselatan.png">Sulawesi Selatan</td>
                         <td>0</td>
                         <td>0</td>
@@ -330,7 +356,7 @@
                         <td>0</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/sulawesitengah.png">Sulawesi Tengah</td>
                         <td>0</td>
                         <td>0</td>
@@ -339,7 +365,7 @@
                     </tr>
                     
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/sulawesitenggara.png">Sulawesi Tenggara</td>
                         <td>0</td>
                         <td>0</td>
@@ -347,7 +373,7 @@
                         <td>0</td>
                     </tr>
                     <tr>
-                        <td><center>18</center></td>
+                        <td><center>15</center></td>
                         <td class="sb"><img src="img/sumatrabarat.png">Sumatra Barat</td>
                         <td>0</td>
                         <td>0</td>
@@ -360,7 +386,7 @@
         </section>
         <div id="footer">
             <marquee>
-                <p class="news"><b><img src="img/logkota.png">  Seputar Pertandingan : Cabang Olahraga Sepatu Roda menyumbang dua medali emas bagi kontingen Papua dalam  Pekan Olahraga Nasional (PON), masing-masing Dave Emanuel Abel, atlet sepatu roda putra asal Papua meraih emas pada nomor sprint 100 meter, dan Ghea Ivana Kusuma Rachman di nomor sprint 100 meter putri |Final Sepatu Roda ITT 100 M, GOR Trikora Uncen Pukul 10.30 WIT <img src="img/logkota.png"> | Perolehan Medali Pertanggal 27 September 2021, Pukul 20:06 WIT : 1. "logopapua" Papua 4 Emas, 1 Perak, 1 Perunggu | 2. "logobali" Bali 1 Emas, 1 Perak, 0 Perunggu | 3. "logojakarta" DKI Jakarta 0 Emas, 1 Perak, 2 Perunggu | 4. "logokaltim" Kalimantan Timur 0 Emas, 1 Perak, 0 Perunggu | 5. "logosumut" Sumatera Utara 0 Emas, 1 Perak, 0 Perunggu | 6. "logojabar" Jawa Barat 0 Emas, 0 Perak, 2 Perunggu | 7. "logobanten" Banten 0 Emas, 0 Perak, 1 Perunggu | 8. "logosumsel" Sumatera Selatan 0 Emas, 0 Perak, 1 Perunggu | 9. "logoaceh" Aceh 0 Emas, 0 Perak, 0 Perunggu | 10. "logobabel" Bangka Belitung 0 Emas, 0 Perak, 0 Perunggu <img src="img/logkota.png">| Live Streaming Pertandingan Sepak Takraw Antara Sulawesi Selatan VS  Papua, 08.00 WIT on BTM TV <img src="img/logkota.png"> </b></p>
+                <p class="news"><b><img src="img/logkota.png">  Seputar Pertandingan : Cabang Olahraga Sepatu Roda Putra-Putri menyumbang 6 medali emas, dan 2 medali perunggu bagi kontingen Papua dalam Pekan Olahraga Nasional (PON), <img src="img/logkota.png"> Selasa, 28 Sept 21, Tim Takraw Sumbang Dua Medali Emas Pada Nomor Pertandingan Takraw HOOP Putra dan Putri </b></p>
             </marquee>
         </div>
 
@@ -387,7 +413,7 @@
             if (objDiv.scrollTop == (objDiv.scrollHeight - 700)) {
                 objDiv.scrollTop = 20;
             }
-            my_time = setTimeout('pageScroll()', 80);
+            my_time = setTimeout('pageScroll()', 100);
         }
     </script>
 </body>

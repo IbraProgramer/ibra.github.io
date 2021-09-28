@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url(img/bgpon.jpg);
+    background-image: url(img/bg7.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -53,13 +53,13 @@ header {
     margin-top: 10px;
     cursor: pointer;
     float: right;
-    margin-right: 120px;
+    margin-right: 200px;
 }
 
 
 .sb img {
     float: left;
-    width: 49px;
+    width: 30px;
     cursor: pointer;
 }
 
@@ -290,10 +290,10 @@ table {
   }
    
   table th {
-    margin:15px 100px 30px 100px;
-    border-left:1px solid #e0e0e0;
+    text-align: center;
     border-bottom: 1px solid #e0e0e0;
     background: #ededed;
+    font-weight: bold;
   }
 
   table th.no {
@@ -346,3 +346,19 @@ table {
     background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
     background: -moz-linear-gradient(top, #f2f2f2, #f0f0f0);
   }
+
+.emas img {
+      width: 7%;
+  }
+
+ .perak img {
+     width: 15%;
+ }
+
+ .perunggu img {
+    width: 12%;
+}
+
+td {
+    font-size: 20px;
+}
