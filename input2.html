@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Score</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="stylesheet" type="text/css" href="Boostrap/bootstrap.css">
+<style>
+    legend {
+        color: white;
+        padding: 5px;
+        background: #216A68;
+        border-radius: 5px;
+    }
+    fieldset {
+        max-width: 400px;
+        border-radius: 10px;
+        border-color: #4fffa5;
+        background: #007b65;
+    }
+    label {
+        float: left;
+    }
+    input {
+        border: none;
+        border-radius: 3px;
+        height: 30px;
+        margin-top: 20px;
+    }
+    button {
+        cursor: pointer;
+        color: white;
+        background: #ff5f5f;
+        width: 100px;
+        height: 30px;
+        border-radius: 4px;
+        border: none;
+    }
+    button:hover {
+        background: #ff2e2e;
+    }
+    label {
+        color: white;
+    }
+</style>
+<body>
+        <div class="navbar">
+            <div class="logo"><img src="img/logopon.png">
+        </div> 
+        <div class="logkota"><img src="img/logkota.png"></div>         
+            <section>
+                <div align="center">
+                    <form>
+                        <fieldset align="center">
+                            <legend>Data List</legend>
+                            <p>
+                                <label for="programing">
+                                    Bahasa Pemrograman Yang Di Kuasai?</label
+                                >
+                                <input
+                                    placeholder="Input Language"
+                                    type="text"
+                                    name="programing"
+                                    list="programingLangs"
+                                />
+                                <datalist id="programingLangs">
+                                    <select name="altprogramingLangs">
+                                        <option value="javascript">JavaScript </option>
+                                        <option value="java"> Java </option>
+                                        <option value="ruby"> Ruby </option>
+                                        <option value="python"> Python </option>
+                                    </select>
+                                </datalist>
+                                <button type="submit">Submit</button>
+                            </p>
+                        </fieldset>
+                    </form>
+                </div>
+                  
+                </section>
+                <section>
+                    <div class="tambah-data">
+                        <input class="submit-btn2" type="submit" name="submit" value="Tambah Data"/>
+                    </div>
+                </section>
+                
+                
+</body>
+</html>

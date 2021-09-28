@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDALI</title>
+</head>
+<link rel="stylesheet" type="text/css" href="stylemedal.css">
+<link rel="stylesheet" type="text/css" href="Boostrap/bootstrap.css">
+<script type="text/javascript">
+    window.onload = function() { jam(); }
+   
+    function jam() {
+     var e = document.getElementById('jam'),
+     d = new Date(), h, m, s;
+     h = d.getHours();
+     m = set(d.getMinutes());
+     s = set(d.getSeconds());
+   
+     e.innerHTML = h +':'+ m +':'+ s;
+   
+     setTimeout('jam()', 1000);
+    }
+   
+    function set(e) {
+     e = e < 10 ? '0'+ e : e;
+     return e;
+    }
+
+    $(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+   </script>
+<body>
+        <div class="wrapper">
+            <center><marquee><p><b>Juma't, 24 Sept 2021 : Kunjungan Putri Indonesia, Pukul 09.00 WIT Bertempat Di Ruang Rapat SEKRETARIAT SUB PB PON KOTA JAYAPURA | KEDATANGAN KONTINGAN : Cabor Tenis - NTB; Cabor Dayung Canoe - KALTENG, KALSEL, RIAU, SUMSEL, SUMUT, JATENG; Cabor Sepatu Roda - DI YOGYAKARTA, ACEH, RIAU, SUMSEL, SUMUT, SULTENG, JATENG; Cabor Sepak Takraw - BABEL, KALSEL, SULSEL, SULTENG, RIAU, SUMSEL, SUMUT, SULTENG, JATENG, KEP.RIAU, BALI; Cabor Sepak Bola - SULUT, SULSEL, ACEH, SUMUT, JATENG; Cabor Layar - JATIM; Cabor Voli Indoor - JABAR; Cabor Dayung Rowing - JAMBI.</b></p></marquee></center>
+        </div>
+        <div class="navbar">
+            <div class="logo"><img src="img/logopon.png">
+                
+            </div>
+            <div class="live">
+                <center><h1>MEDALI</h1></center>
+               
+            </div>
+           
+            <div class="logkota"><img src="img/logkota.png">
+                
+            </div>
+        </div>
+        <center>
+            <h1 style="font-size: 30px; font-family: verdana; color: #fff; float: right; margin-right: 140px;" id="jam"></h1>
+            </center>
+            <script type='text/javascript'>
+                window.setTimeout("hari()",0)
+                function hari(){
+                 var namah = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu");
+                 var namab = new Array("januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "September", "november", "desember");
+                 var tanggal = new Date();
+                 setTimeout("hari()",0);
+                 document.getElementById("dino").innerHTML =namah[tanggal.getDay()]+", "+tanggal.getDate()+" "+namab[tanggal.getMonth()]+" "+tanggal.getFullYear();
+                }
+                </script>
+                <div style="color : #fff;font-size: 30px; margin-left:120px" id='dino'></div>
+        <section>
+            <table cellspacing='0'class="table table-hover table-responsive">
+                <thead>
+                    <tr>
+                        <th class="no">NO</th>
+                        <th style="padding-left: 40px;">Provinsi</th>
+                        <th>Emas</th>
+                        <th>Perak</th>
+                        <th>Perunggu</th>
+                    </tr>
+                </thead>
+            </table>
+            <div id="contain">
+            <table cellspacing='0'>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td class="sb"><img src="img/aceh.png">Aceh</td> 
+                        <td> 54</td>
+                        <td>21</td>
+                        <td>43</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="sb"><img src="img/bali.png">Bali</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="sb"><img src="img/bangkabelitung.png">Bangka Belitung</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td class="sb"><img src="img/banten.png">Banten</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td class="sb"><img src="img/bengkulu.png">Bengkulu</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td><h4></h4><left></left></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="sb"><img src="img/diy.png">Daerah Istimewa Yogyakarta</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td class="sb"><img src="img/dki.png">DKI Jakarta</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td class="sb"><img src="img/gorontalo.jpg">Gorontalo</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td class="sb"><img src="img/jambi.jpg">Jambi</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td class="sb"><img src="img/jabar.png">Jawa Barat</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td class="sb"><img src="img/jateng.png">Jawa Tengah</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td class="sb"><img src="img/jatim.png">Jawa Timur</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td class="sb"><img src="img/kalbar.png">Kalimantan Barat </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td class="sb"><img src="img/kalsel.gif">Kalimantan Selatan</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>15 </td>
+                        <td class="sb"><img src="img/kalteng.png">Kalimantan Tengah</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td class="sb"><img src="img/kaltim.png">Kalimantan Timur</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td class="sb"><img src="img/kalutara.png">Kalimantan Utara</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td class="sb"><img src="img/kepriau.png">Kepulauan Riau</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td class="sb"><img src="img/lampung.png">Lampung</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td class="sb"><img src="img/maluku.png">Maluku</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td class="sb"><img src="img/malukuutara.png">Maluku Utara</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td class="sb"><img src="img/ntb.png">Nusa Tenggara Barat</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td class="sb"><img src="img/ntt.png">Nusa Tenggara Timur</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td class="sb"><img src="img/papua.png">Papua</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td class="sb"><img src="img/papuabarat.png">Papua Barat</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td class="sb"><img src="img/riau.png">Riau</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td class="sb"><img src="img/sulawesibarat.png">Sulawesi Barat</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td class="sb"><img src="img/sulawesiselatan.png">Sulawesi Selatan</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td class="sb"><img src="img/sulawesitengah.png">Sulawesi Tengah</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>30 </td>
+                        <td class="sb"><img src="img/sulawesitenggara.png">Sulawesi Tenggara</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td class="sb"><img src="img/sulawesitenggara.png">Sulawesi Tenggara</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td class="sb"><img src="img/sumatrabarat.png">Sumatra Barat</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td class="sb"><img src="img/sumatraselatan.png">Sumatra Selatan</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td class="sb"><img src="img/sumatrautara.png">Sumatra Utara</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </section>
+        <div id="footer">
+            <marquee>
+                <p class="news"><b><img src="img/logkota.png">  Seputar Pertandingan : Cabang Olahraga Sepatu Roda menyumbang dua medali emas bagi kontingen Papua dalam  Pekan Olahraga Nasional (PON), masing-masing Dave Emanuel Abel, atlet sepatu roda putra asal Papua meraih emas pada nomor sprint 100 meter, dan Ghea Ivana Kusuma Rachman di nomor sprint 100 meter putri |Final Sepatu Roda ITT 100 M, GOR Trikora Uncen Pukul 10.30 WIT <img src="img/logkota.png"> | Perolehan Medali Pertanggal 27 September 2021, Pukul 20:06 WIT : 1. "logopapua" Papua 4 Emas, 1 Perak, 1 Perunggu | 2. "logobali" Bali 1 Emas, 1 Perak, 0 Perunggu | 3. "logojakarta" DKI Jakarta 0 Emas, 1 Perak, 2 Perunggu | 4. "logokaltim" Kalimantan Timur 0 Emas, 1 Perak, 0 Perunggu | 5. "logosumut" Sumatera Utara 0 Emas, 1 Perak, 0 Perunggu | 6. "logojabar" Jawa Barat 0 Emas, 0 Perak, 2 Perunggu | 7. "logobanten" Banten 0 Emas, 0 Perak, 1 Perunggu | 8. "logosumsel" Sumatera Selatan 0 Emas, 0 Perak, 1 Perunggu | 9. "logoaceh" Aceh 0 Emas, 0 Perak, 0 Perunggu | 10. "logobabel" Bangka Belitung 0 Emas, 0 Perak, 0 Perunggu <img src="img/logkota.png">| Live Streaming Pertandingan Sepak Takraw Antara Sulawesi Selatan VS  Papua, 08.00 WIT on BTM TV <img src="img/logkota.png"> </b></p>
+            </marquee>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script>
+        var my_time;
+        $(document).ready(function() {
+
+            pageScroll();
+            $("#contain").mouseover(function() {
+                clearTimeout(my_time);
+            }).mouseout(function() {
+                pageScroll();
+            });
+
+        })
+
+        function pageScroll() {
+            var objDiv = document.getElementById("contain");
+            objDiv.scrollTop = objDiv.scrollTop + 1;
+
+
+            if (objDiv.scrollTop == (objDiv.scrollHeight - 700)) {
+                objDiv.scrollTop = 20;
+            }
+            my_time = setTimeout('pageScroll()', 80);
+        }
+    </script>
+</body>
+</html>

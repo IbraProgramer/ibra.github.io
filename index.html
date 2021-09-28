@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Score</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css?as">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+<body>
+    <div class="wrapper">
+        <center>
+            <div class="col-12 text-center">
+                <marquee>
+                    <p><b><img src="img/logkota.png"> Rapat Koordinasi Penyelenggaraan PON XX PAPUA TAHUN 2021 Dipimpin Oleh Menteri Koordinator Bidang Pembangunan Manusia dan Kebudayaan Republik Indonesia Pada Senin, 27 September 2021, Pukul 09.00 WIB, Bertempat Di Hotel Horison Kotaraja   <img src="img/logkota.png">  27 September 2021, KEDATANGAN KONTINGAN : Cabor Dayung Canoe - JATENG; Cabor Sepatu Roda - DI YOGYAKARTA, JATENG; Cabor Sepak Takraw - JATENG; Cabor Sepak Bola - JATENG; Cabor Binaraga - DI YOGYAKARTA, BANTEN; Cabor Voli Outdoor - DI YOGYAKARTA; Cabor Te Kwon Do - DI YOGYAKARTA; Cabor Akuatik-Renang Perairan Terbuka - Di YOGYAKARTA; Cabor Angkat Besi - BANTEN.</b></p>
+                </marquee>
+            </div>
+        </center>
+    </div>
+    <div class="row" style="padding: 30px;">
+        <div class="col-12 col-md-4 text-left">
+            <div class="logo"><img src="img/logopon.png"></div>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+            <div class="live">
+                <h1>LIVE SCORE</h1>
+                <h1 class="sub">SUB PB PON XX<br> KOTA JAYAPURA</h1>    
+            </div>
+        </div>
+        <div class="col-12 col-md-4 text-right">
+            <div class="logkota"><img src="img/logkota.png"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 col-md-4 text-center">
+            <div style="color : #fff;font-size: 25px;" id='dino'></div>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+            
+        </div>
+        <div class="col-12 col-md-4 text-center">
+            <h1 style="font-size: 25px; font-family: verdana; color: #fff; float: right; margin-right: 160px;" id="jam"></h1>
+        </div>
+    </div>
+    <div class="navbar">
+
+
+
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            jam();
+        }
+
+        function jam() {
+            var e = document.getElementById('jam'),
+                d = new Date(),
+                h, m, s;
+            h = d.getHours();
+            m = set(d.getMinutes());
+            s = set(d.getSeconds());
+
+            e.innerHTML = h + ':' + m + ':' + s;
+
+            setTimeout('jam()', 1000);
+        }
+
+        function set(e) {
+            e = e < 10 ? '0' + e : e;
+            return e;
+        }
+    </script>
+    <script type='text/javascript'>
+        window.setTimeout("hari()", 0)
+
+        function hari() {
+            var namah = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu");
+            var namab = new Array("januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "September", "november", "desember");
+            var tanggal = new Date();
+            setTimeout("hari()", 0);
+            document.getElementById("dino").innerHTML = namah[tanggal.getDay()] + ", " + tanggal.getDate() + " " + namab[tanggal.getMonth()] + " " + tanggal.getFullYear();
+        }
+    </script>
+
+    <section>
+        <table class="table table-light table-hover table-responsive">
+            <thead>
+                <tr>
+                    <th>
+                        <h4><b>&nbsp;&nbsp;&nbsp;&nbsp;HARI</b></h4>
+                    </th>
+                    <th>
+                        <h4 style="text-align: right;"><b>DISIPLIN CABOR</b></h4>
+                    </th>
+                    <th>
+                         <h4 style="text-align: right; margin-left: 30px;"><b>&nbsp;&nbsp;&nbsp;WAKTU&nbsp;&nbsp;&nbsp;&nbsp;</b></h4>
+                    </th>
+                    <th>
+                        <h4 style="text-align: right;"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VENUE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></h4>
+                    </th>
+                    <th>
+                        <h4 style="text-align: right;"><b>JADWAL PERTANDINGAN</b></h4>
+                    </th>
+                    <th>
+                        <h4 style="text-align: right; margin-left: 15px;"><b>HASIL</b></h4>
+                        <left></left>
+                    </th>
+                    <th>
+                        <h4><b>STATUS</b></h4>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div id="contain">
+            <table class="table table-light table-hover table-responsive">
+                <tbody >
+                    <tr  >
+                        <td> Sabtu, 25 Sept 2021</td>
+                        <td class="sb"><img src="img/softball1.png"  >Softball Putra</td>
+                        <td>08.30 - 10.30</td>
+                        <td  >Agus Kafiar Uncen</td>
+                        <td>PAPUA BARAT &nbsp; -&nbsp; KALIMANTAN TIMUR</td>
+                        <td>7&nbsp;-&nbsp;0</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>08.30 - 12.00</td>
+                        <td>Marthen Indey Auri</td>
+                        <td>DKI JAKARTA &nbsp; -&nbsp; BANTEN</td>
+                        <td>9&nbsp;-&nbsp;2</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>08.30 - 12.00</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>KALIMANTAN TIMUR &nbsp; -&nbsp; KALIMANTAN TENGAH</td>
+                        <td>16&nbsp;-&nbsp;1</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>13.00 - 16.30</td>
+                        <td>Marthen Indey Auri</td>
+                        <td>LAMPUNG &nbsp; -&nbsp; PAPUA</td>
+                        <td>15&nbsp;-&nbsp;9</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>10.45 - 12.45</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>LAMPUNG &nbsp; -&nbsp; PAPUA</td>
+                        <td>8&nbsp;-&nbsp;0</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>13.00 - 15.00</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>BANTEN &nbsp; -&nbsp; SULAWESI TENGGARA</td>
+                        <td>0&nbsp;-&nbsp;7</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Minggu, 26 Sept 2021</td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>13.00 - 15.00</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>BANTEN &nbsp; -&nbsp; DKI JAKARTA</td>
+                        <td>2&nbsp;-&nbsp;10</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>13.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>JAWA BARAT &nbsp; -&nbsp; NUSA TENGGARA BARAT </td>
+                        <td>2&nbsp;-&nbsp;1</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra </td>
+                        <td>13.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>DKI JAKARTA &nbsp; -&nbsp; JAWA TENGAH </td>
+                        <td>2&nbsp;-&nbsp;1</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra </td>
+                        <td>13.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>PAPUA &nbsp; -&nbsp; SUMATERA SELATAN</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>13.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>KALIMANTAN TIMUR &nbsp; -&nbsp; BALI</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putri </td>
+                        <td>13.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>PAPUA BARAT &nbsp; -&nbsp; KALIMANTAN SELATAN</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putri </td>
+                        <td>13.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>JAWA BARAT &nbsp; -&nbsp; SUMATRA SELATAN</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putri </td>
+                        <td>13.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>DKI JAKARTA &nbsp; -&nbsp; JAWA TENGAH</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>14.14 - 16.15</td>
+                        <td>Marthen Indey Auri</td>
+                        <td>PAPUA BARAT &nbsp; -&nbsp; PAPUA</td>
+                        <td>3&nbsp;-&nbsp;4</td>
+                        <td>
+                            <div class="end">END</div>
+                        </td>
+                    </tr>
+                  
+                    <tr>
+                        <td>Senin, 27 Sept 2021</td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putra</td>
+                        <td>08.00 - 11.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>JAWA TIMUR &nbsp; -&nbsp; DKI JAKARTA</td>
+                        <td>2&nbsp;-&nbsp;1</td>
+                        <td ><div class="end">END</div></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putra</td>
+                        <td>08.00 - 11.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>SULAWESI SELATAN &nbsp; -&nbsp; PAPUA</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putri</td>
+                        <td>08.00 - 11.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>DKI JAKARTA &nbsp; -&nbsp; RIAU</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.00</td>
+                        <td>Teluk Yotefa (H1)</td>
+                        <td>SULAWESI UTARA <br> SUMATRA UTARA <br> DKI JAKARTA <br> MALUKU <br> BANTEN</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.15</td>
+                        <td>Teluk Yotefa (H1)</td>
+                        <td>PAPUA BARAT <br> SUMATRA BARAT <br> KALIMANTAN SELATAN <br> KALIMANTAN TENGAH <br> DKI JAKARTA <br> SULAWESI BARAT</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.30</td>
+                        <td>Teluk Yotefa (H2)</td>
+                        <td>JAMBI <br> KALIMANTAN TENGAH  <br> JAWA TIMUR <br> DKI JAKARTA <br> SULAWESI SELATAN <br> RIAU</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>08.30 - 10.30</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>LAMPUNG - BANTEN</td>
+                        <td>12&nbsp;-&nbsp;1</td>
+                        <td> <div class="end">END</div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>08.30 - 12.00</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>KALIMANTAN TIMUR VS PAPUA</td>
+                        <td>12&nbsp;-&nbsp;2</td>
+                        <td><div class="end">END</div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>08.30 - 12.00</td>
+                        <td>Marthen Indey Auri</td>
+                        <td>LAMPUNG VS JAWA BARAT</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.45</td>
+                        <td>Teluk Yotefa (H1)</td>
+                        <td>JAWA TIMUR <br>JAMBI  <br> PAPUA <br> SULAWESI UTARA <br> SULAWESI BARAT <br> KALIMANTAN SELATAN </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.00</td>
+                        <td>Teluk Yotefa (H2)</td>
+                        <td>JAMBI <br>SUMATRA BARAT <br>PAPUA  <br> JAWA TIMUR <br>LAMPUNG </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>JAWA TIMUR VS NUSA TENGGARA BARAT </td>
+                        <td>2&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>PAPUA BARAT  VS JAWA TENGAH </td>
+                        <td>2&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>BENGKULU VS SUMATERA SELATAN </td>
+                        <td>2&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>BANGKA BELITUNG VS BALI </td>
+                        <td>1&nbsp;-&nbsp;2</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td> JAWA TIMUR VS KALIMANTAN SELATAN</td>
+                        <td>2&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>PAPUA VS SUMATERA SELATAN </td>
+                        <td>2&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>NUSA TENGGARA BARAT VS JAWA TENGAH </td>
+                        <td>1&nbsp;-&nbsp;2</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.15</td>
+                        <td>Teluk Yotefa (H2)</td>
+                        <td>JAWA TIMUR<br>BANTEN<br>JAWA BARAT<br>SULAWESI UTARA<br>JAMBI<br>PAPUA</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.30</td>
+                        <td>Teluk Yotefa (H2)</td>
+                        <td>JAWA BARAT<br>SULAWESI UTARA <br> PAPUA BARAT <br> KALIMANTAN SELATAN  <br>PAPUA<br>BANTEN </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.45</td>
+                        <td>Teluk Yotefa (H2)</td>
+                        <td>SUMATERA BARAT <br>JAWA BARAT <br> PAPUA BARAT <br>SULAWESI TENGAH  <br>BANTEN </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>10.00</td>
+                        <td>Teluk Yotefa (H3)</td>
+                        <td> JAWA TENGAH<br>KALIMANTAN TENGAH <br>RIAU  <br> JAWA BARAT </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri</td>
+                        <td>10.30-12.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 100 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra</td>
+                        <td>10.30-12.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 100 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>10.45-12.45</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>PAPUA - SULAWESI TENGGARA</td>
+                        <td>3&nbsp;-&nbsp;5</td>
+                        <td> <div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                 
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putra</td>
+                        <td>13.00 - 16.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>DKI JAKARTA - RIAU </td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw</td>
+                        <td>12.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>SULAWESI SELATAN - PAPUA </td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw</td>
+                        <td>12.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>DKI JAKARTA - JAWA TIMUR</td>
+                        <td>1&nbsp;-&nbsp;2</td>
+                        <td><div class="end">END</div> </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>13.00 - 15.00</td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>DKI JAKARTA - KALIMANTAN TIMUR  </td>
+                        <td>7&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>13.00 - 16.30</td>
+                        <td>Marthen Indey Auri</td>
+                        <td>KALIMANTAN TENGAH - BANTEN</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td><div class="end">END</div></td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri</td>
+                        <td>14.30-16.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 400 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra</td>
+                        <td>14.30-16.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 400 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepakbola.png">Sepak Bola</td>
+                        <td>15.00</td>
+                        <td>Stadion Mandala</td>
+                        <td>PAPUA &nbsp; -&nbsp; JAWA BARAT</td>
+                        <td>5&nbsp;-&nbsp;1</td>
+                        <td><div class="end">END</div></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepakbola.png">Sepak Bola</td>
+                        <td>15.00</td>
+                        <td>Mahacandra Uncen</td>
+                        <td>JAWA TIMUR &nbsp; -&nbsp; SULAWESI SELATAN</td>
+                        <td>3&nbsp;-&nbsp;0</td>
+                        <td><div class="end">END</div></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepakbola.png">Sepak Bola</td>
+                        <td>15.00</td>
+                        <td>Barbanas Yaouwe Kab Jayapura </td>
+                        <td>KALIMANTAN TIMUR &nbsp; -&nbsp; BENGKULU</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri</td>
+                        <td>17.00-18.30</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL 15.000 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra</td>
+                        <td>17.00-18.30</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL 15.000 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td> Selasa, 28 Sept 2021</td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putra</td>
+                        <td>08.00 - 11.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>JAWA TIMUR &nbsp; -&nbsp; RIAU</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> 
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putri</td>
+                        <td>08.00 - 11.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>DKI JAKARTA &nbsp; -&nbsp; JAWA TIMUR</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.00</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.15</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>08.30 - 10.30
+                        </td>
+                        <td>Agus Kafiar Uncen 
+                        </td>
+                        <td>SULAWESI TENGGARA - KALIMANTAN TIMUR</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>08.30 - 12.00
+                        </td>
+                        <td>Agus Kafiar Uncen 
+                        </td>
+                        <td>BANTEN - KALIMANTAN TIMUR</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>08.30 - 12.00
+                        </td>
+                        <td>Marthen Indey Auri  
+                        </td>
+                        <td>DKI JAKARTA - LAMPUNG</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>08.45</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>JAWA TIMUR &nbsp; -&nbsp;JAWA BARAT </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>   
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>PAPUA BARAT &nbsp; -&nbsp;DKI JAKARTA </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>   
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>BENGKULU &nbsp; -&nbsp;PAPUA </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>   
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putra</td>
+                        <td>09.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>BANGKA BELITUNG &nbsp; -&nbsp;KALIMANTAN TIMUR </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>   
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putri</td>
+                        <td>09.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>JAWA TIMUR &nbsp; -&nbsp;PAPUA BARAT </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putri</td>
+                        <td>09.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>PAPUA &nbsp; -&nbsp;JAWA BARAT  </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/tenis.png">Tenis Putri</td>
+                        <td>09.00 - Selesai</td>
+                        <td>Lapangan Tenis Walikota</td>
+                        <td>NUSA TENGGARA BARAT &nbsp; -&nbsp;DKI JAKARTA   </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.00</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.15</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.30</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>09.45</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>10.00.45</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri</td>
+                        <td>10.30-12.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 200 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra</td>
+                        <td>10.30-12.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 200 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda </td>
+                        <td>10.30-12.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 200 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/baseball.png">Baseball</td>
+                        <td>10.45 - 12.45</td>
+                        <td>Agus Kafiar Uncen 
+                        </td>
+                        <td>PAPUA &nbsp; -&nbsp; BANTEN</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putri</td>
+                        <td>13.00 - 16.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>SEMIFINAL DOUBLE PUTRI &nbsp; -&nbsp; SEMIFINAL DOUBLE PUTRI</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td> 
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/takraw.png">Sepak Takraw Putri</td>
+                        <td>13.00 - 16.00</td>
+                        <td>GOR Trikora Uncen</td>
+                        <td>SEMIFINAL DOUBLE PUTRI &nbsp; -&nbsp; SEMIFINAL DOUBLE PUTRI</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td> 
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>13.00 - 15.00 </td>
+                        <td>Agus Kafiar Uncen</td>
+                        <td>LAMPUNG &nbsp; -&nbsp; PAPUA BARAT</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>
+                            On Schedule
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/softball1.png">Softball Putra</td>
+                        <td>13.00 - 16.30 </td>
+                        <td>Marthen Indey Auri</td>
+                        <td>PAPUA &nbsp; -&nbsp; JAWA BARAT</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>
+                            On Schedule
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>14.00</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>14.15</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>14.30</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri </td>
+                        <td>14.30-16.30</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>KUALIFIKASI ITT 500 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra </td>
+                        <td>14.30-16.30</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>KUALIFIKASI ITT 500 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri </td>
+                        <td>14.30-16.30</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 500 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra </td>
+                        <td>14.30-16.30</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL ITT 500 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda  </td>
+                        <td>14.30-16.30</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td> ITT 500 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>14.45</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr> <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>15.00</td>
+                        <td>Teluk Youtefa</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepakbola.png">Sepak Bola</td>
+                        <td>15.00</td>
+                        <td>Mandala Kota Jayapura
+                        </td>
+                        <td>NUSA TENGGARA TIMUR &nbsp; -&nbsp; MALUKU UTARA</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepakbola.png">Sepak Bola</td>
+                        <td>15.00</td>
+                        <td>Mahacandra Uncen</td>
+                        <td>SUMATERA UTARA &nbsp; -&nbsp; JAWA TENGAH </td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepakbola.png">Sepak Bola</td>
+                        <td>15.00</td>
+                        <td>Barbanas Yaouwe Kab Jayapura 
+                        </td>
+                        <td>ACEH &nbsp; -&nbsp; SULAWESI UTARA</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>15.15</td>
+                        <td>Teluk Yotefa (H1)</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>15.30</td>
+                        <td>Teluk Yotefa (H1)</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>15.45</td>
+                        <td>Teluk Yotefa (H1)</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/Dayung.png">Dayung Canoeing</td>
+                        <td>16.00</td>
+                        <td>Teluk Yotefa (H1)</td>
+                        <td></td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri</td>
+                        <td>17.00-19.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>KUALIFIKASI SPRINT 1000 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra</td>
+                        <td>17.00-19.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>KUALIFIKASI SPRINT 1000 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putri</td>
+                        <td>17.00-19.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL SPRINT 1000 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda Putra</td>
+                        <td>17.00-19.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td>FINAL SPRINT 1000 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="sb"><img src="img/sepaturoda.png">Sepatu Roda </td>
+                        <td>17.00-19.00</td>
+                        <td>Klementinal Roller Sport Arena</td>
+                        <td> SPRINT 1000 M</td>
+                        <td>&nbsp;-&nbsp;</td>
+                        <td>On Schedule
+                        </td>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <div id="footer">
+        <marquee>
+            <p class="news"><b><img src="img/logkota.png">  Seputar Pertandingan : Cabang Olahraga Sepatu Roda menyumbang dua medali emas bagi kontingen Papua dalam  Pekan Olahraga Nasional (PON), masing-masing Dave Emanuel Abel, atlet sepatu roda putra asal Papua meraih emas pada nomor sprint 100 meter, dan Ghea Ivana Kusuma Rachman di nomor sprint 100 meter putri |Final Sepatu Roda ITT 100 M, GOR Trikora Uncen Pukul 10.30 WIT <img src="img/logkota.png"> | Perolehan Medali Pertanggal 27 September 2021, Pukul 20:06 WIT : 1. <img src="img/papua.png"> Papua 4 Emas, 1 Perak, 1 Perunggu | 2. <img src="img/bali.png"> Bali 1 Emas, 1 Perak, 0 Perunggu | 3. <img src="img/dki.png"> DKI Jakarta 0 Emas, 1 Perak, 2 Perunggu | 4. <img src="img/kaltim.png"> Kalimantan Timur 0 Emas, 1 Perak, 0 Perunggu | 5. <img src="img/sumatrautara.png"> Sumatera Utara 0 Emas, 1 Perak, 0 Perunggu | 6. <img src="img/jabar.png"> Jawa Barat 0 Emas, 0 Perak, 2 Perunggu | 7. <img src="img/banten.png"> Banten 0 Emas, 0 Perak, 1 Perunggu | 8. <img src="img/sumatraselatan.png"> Sumatera Selatan 0 Emas, 0 Perak, 1 Perunggu | 9. <img src="img/aceh.png"> Aceh 0 Emas, 0 Perak, 0 Perunggu | 10. <img src="img/bangkabelitung.png"> Bangka Belitung 0 Emas, 0 Perak, 0 Perunggu <img src="img/logkota.png">| Live Streaming Pertandingan Sepak Takraw Antara Sulawesi Selatan VS  Papua, 08.00 WIT on BTM TV <img src="img/logkota.png"> </b></p>
+        </marquee>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    <script>
+        var my_time;
+        $(document).ready(function() {
+
+            pageScroll();
+            $("#contain").mouseover(function() {
+                clearTimeout(my_time);
+            }).mouseout(function() {
+                pageScroll();
+            });
+
+        })
+
+        function pageScroll() {
+            var objDiv = document.getElementById("contain");
+            objDiv.scrollTop = objDiv.scrollTop + 1;
+
+
+            if (objDiv.scrollTop == (objDiv.scrollHeight - 700)) {
+                objDiv.scrollTop = 20;
+            }
+            my_time = setTimeout('pageScroll()', 80);
+        }
+    </script>
+</body>
+
+</html>

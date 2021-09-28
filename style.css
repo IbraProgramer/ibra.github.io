@@ -1,0 +1,280 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(img/bgpon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.wrapper {
+    max-width: 20000px;
+    margin: auto;
+    background-color: #fff;
+    color: #000;
+    height: 45px;
+}
+
+.wrapper p {
+    margin-top: 7px;
+    font-size: 25px;
+}
+
+.wrapper img {
+    width: 1%;
+}
+
+header {
+    background-image: url(img/blue.jpg);
+    height: auto;
+    background-size: cover;
+    background-position: center;
+}
+
+.row .pad {
+    padding: 20px;
+}
+
+.logo img {
+    float: left;
+    width: 160px;
+    height: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    margin-left: 125px;
+}
+
+.logkota img {
+    width: 60px;
+    height: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    float: right;
+    margin-right: 120px;
+}
+
+.sb img {
+    float: left;
+    width: 49px;
+    cursor: pointer;
+}
+
+.navbar {
+    max-width: 2200px;
+    margin: auto;
+}
+
+ul {
+    float: right;
+    margin-top: 35px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffff;
+    padding: 5px 20px;
+    border: 2px solid #ffff;
+    border-radius: 20px;
+    transition: 0.6s;
+    margin: 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+ul li a:hover {
+    background-color: red;
+    color: #ffff;
+}
+
+section {
+    width: 85%;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 7%;
+    margin-top: 1%;
+    color: #fff;
+}
+
+section h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+}
+
+section table {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section p {
+    font-size: 20px;
+    color: #000;
+}
+
+section form {
+    margin-bottom: 20px;
+    float: left;
+}
+
+section .btn {
+    background: -webkit-linear-gradient(right, #3498db, #9b59b6);
+    border-radius: 21px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    height: 42.3px;
+    margin: 0 auto;
+    transition: 0.25s;
+    width: 80px;
+    margin-left: 10px;
+}
+
+.contents {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+}
+
+.contents h1 {
+    color: red;
+    font-size: 80px;
+    text-shadow: -6px 6px 6px black;
+    font-family: 'comic sans ms';
+}
+
+.contents .color {
+    color: white;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+    left: 36%;
+    margin-top: 60px;
+    font-weight: bold;
+}
+
+.button .btn {
+    border: 2px solid;
+    padding: 10px 30px;
+    color: #ffff;
+    text-decoration: none;
+    transition: 0.6s ease;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: red;
+    margin-left: 120px;
+}
+
+.button .btn:hover {
+    background-color: rgb(228, 228, 13);
+    color: #ffff;
+}
+
+.table-light {
+    margin-top: 1%;
+    border-color: #000 ;
+}
+
+.live {
+    color: #fff;
+    background: -webkit-linear-gradient(right, #3498db, #9b59b6);
+    border-radius: 21px;
+    border: none;
+    box-shadow: 0px 1px 8px #ffff;
+    cursor: pointer;
+    color: white;
+    font-family: "Raleway", sans-serif;
+    height: 50px;
+    transition: 0.25s;
+    width: 400px;
+    font-size: 40px;
+    font-weight: bold;
+    float: right;
+    margin-right: 100px;
+}
+
+.gif img {
+    margin-right: 10px;
+    width: 50%;
+}
+
+#contain {
+    margin-top: -27px;
+}
+
+.news {
+    font-size: 25px;
+}
+
+.news img {
+    width: 1%;
+}
+
+.sub {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.end {
+    border-radius: 21px;
+    background: -webkit-linear-gradient(right, #0dd13e, #0dd13e);
+    color: #fff;
+    width: 80%;
+    height: 30px;
+    margin-left: 30px;
+}
+
+.jabar {
+    margin: auto;
+}
+
+.jabar img {
+    width: 3%;
+}
+
+.th {
+    font-weight: bold;
+}
+
+#contain {
+    height: 700px;
+    overflow-y: scroll;
+}
+
+#table_scroll {
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    border-collapse: collapse;
+}
+
+.fg-toolbar {
+    padding: 0;
+}
+
+.dataTables_info {
+    float: left;
+    margin: 5px;
+    width: 30%;
+}
+
+.dataTables_paginate {
+    float: right;
+    margin: 5px;
+    text-align: right;
+}
+
+#footer {
+    max-width: 20000px;
+    margin: auto;
+    background-color: #fff;
+    color: #000;
+    height: 55px;
+}  
