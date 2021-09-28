@@ -194,8 +194,8 @@ section .btn {
     font-family: "Raleway", sans-serif;
     height: 50px;
     transition: 0.25s;
-    width: 400px;
-    font-size: 40px;
+    width: 500px;
+    font-size: 1px;
     font-weight: bold;
     float: right;
     margin-right: 100px;
