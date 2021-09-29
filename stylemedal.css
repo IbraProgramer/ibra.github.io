@@ -247,7 +247,7 @@ section .btn {
 }
 
 #contain {
-    height: 770px;
+    height: 700px;
     overflow-y: scroll;
 }
 
