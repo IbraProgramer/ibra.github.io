@@ -6,9 +6,7 @@
 
 body {
     background-image: url(img/bgpon.jpg);
-    width: 100%;
-    height: auto;
-    background-size: 100% 100%;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -62,11 +60,6 @@ header {
     float: left;
     width: 49px;
     cursor: pointer;
-}
-
-.navbar {
-    max-width: 2200px;
-    margin: auto;
 }
 
 ul {
@@ -207,8 +200,18 @@ section .btn {
     width: 50%;
 }
 
+#table thead tr th h4 {
+    text-align: right; 
+    margin-left: 30px;
+}
+
 #contain {
     margin-top: -27px;
+}
+
+#contain tbody tr td {
+    text-align:center;
+    margin-left: 30px;
 }
 
 .news {
@@ -239,10 +242,6 @@ section .btn {
 
 .jabar img {
     width: 3%;
-}
-
-.th {
-    font-weight: bold;
 }
 
 #contain {
@@ -279,4 +278,5 @@ section .btn {
     background-color: #fff;
     color: #000;
     height: 55px;
-}  
+}
+
