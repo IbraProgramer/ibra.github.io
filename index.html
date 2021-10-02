@@ -101,7 +101,7 @@
 
         function hari() {
             var namah = new Array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu");
-            var namab = new Array("januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "September", "november", "desember");
+            var namab = new Array("januari", "februari", "maret", "april", "mei", "juni", "juli", "agustus", "September", "Oktober", "desember");
             var tanggal = new Date();
             setTimeout("hari()", 0);
             document.getElementById("dino").innerHTML = namah[tanggal.getDay()] + ", " + tanggal.getDate() + " " + namab[tanggal.getMonth()] + " " + tanggal.getFullYear();
